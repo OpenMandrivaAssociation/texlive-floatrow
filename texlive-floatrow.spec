@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/floatrow
+# catalog-date 2009-09-27 10:36:15 +0200
+# catalog-license lppl
+# catalog-version 0.3b
 Name:		texlive-floatrow
 Version:	0.3b
 Release:	1
@@ -69,6 +75,7 @@ subfloats), and longtable.
 #- source
 %doc %{_texmfdistdir}/source/latex/floatrow/floatrow.dtx
 %doc %{_texmfdistdir}/source/latex/floatrow/floatrow.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -79,3 +86,5 @@ subfloats), and longtable.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
