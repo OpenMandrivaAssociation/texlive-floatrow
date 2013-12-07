@@ -6,7 +6,7 @@
 # catalog-version 0.3b
 Name:		texlive-floatrow
 Version:	0.3b
-Release:	4
+Release:	5
 Summary:	Modifying the layout of floats
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/floatrow
