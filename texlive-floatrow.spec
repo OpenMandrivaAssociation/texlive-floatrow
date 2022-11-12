@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/floatrow
-# catalog-date 2009-09-27 10:36:15 +0200
-# catalog-license lppl
-# catalog-version 0.3b
 Name:		texlive-floatrow
-Version:	0.3b
-Release:	12
+Version:	15878
+Release:	1
 Summary:	Modifying the layout of floats
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/floatrow
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/floatrow.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/floatrow.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/floatrow.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/floatrow.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/floatrow.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/floatrow.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -29,12 +23,12 @@ by packages rotating, wrapfig, subfig (in the case of rows of
 subfloats), and longtable.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -68,24 +62,11 @@ subfloats), and longtable.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.3b-2
-+ Revision: 751928
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.3b-1
-+ Revision: 718463
-- texlive-floatrow
-- texlive-floatrow
-- texlive-floatrow
-- texlive-floatrow
-
