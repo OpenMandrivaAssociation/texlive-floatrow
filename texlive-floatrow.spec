@@ -1,6 +1,6 @@
 Name:		texlive-floatrow
 Version:	15878
-Release:	1
+Release:	2
 Summary:	Modifying the layout of floats
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/floatrow
