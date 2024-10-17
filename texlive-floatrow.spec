@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Modifying the layout of floats
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/floatrow
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/floatrow
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/floatrow.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/floatrow.doc.r%{version}.tar.xz
